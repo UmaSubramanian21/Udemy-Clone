@@ -3,7 +3,7 @@
     padding:0;
 }
 body{
-    font-family:'gabarito',sans-serif;
+      font-family: "Gabarito", sans-serif;
 }
 .navbar{
     display:flex;
