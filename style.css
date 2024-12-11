@@ -3,7 +3,7 @@
     padding:0;
 }
 body{
-      font-family: "Gabarito", sans-serif;
+    font-family:'gabarito',sans-serif;
 }
 .navbar{
     display:flex;
@@ -13,7 +13,12 @@ body{
     border-bottom:solid black 1px;
     gap:10px;
     align-items:center;
+    position:sticky;
+    top:0px;
+    background-color:white;
+    z-index:3;
 }
+
 .navbar_s1{
     color:#A435f0;
     font-size:30px;
@@ -31,6 +36,7 @@ body{
 .navbar_s2 input{
     border:none;
     width:100%;
+    background-color:transparent;
 }
 .navbar_s2 input:focus{
     outline:none;
@@ -38,7 +44,28 @@ body{
 .navbar_s3{
     display:flex;
     gap:10px;
+    align-items:center;
 }
+.mylearning{
+    position:relative;
+    cursor:pointer;
+}
+
+.mylearning__popup
+{
+    position:absolute;
+    background-color:white;
+    border:solid black 1px;
+    padding:20px;
+    width:100px;
+    right:0;
+    top:150%;
+    display:none;
+}
+.mylearning:hover .mylearning__popup{
+    display:block;
+}
+
 .catagories{
     display:flex;
     flex-wrap:wrap;
@@ -46,14 +73,32 @@ body{
     justify-content:space-around;
     border-bottom:solid black 1px;
 }
+
 .catagories p{
     background-color:#A435f0;
     padding:10px;
     border-radius:30px;
     color:white;
 }
+
+.sale-image{
+    position:relative;
+}
+
 .sale-image img{
     width:100%;
+    }
+
+.sale__image--offer{
+    width:250px;
+    height:150px;
+    border:solid grey 2px;
+    background-color:lightgrey;
+    position:absolute;
+    bottom:100px;
+    left:100px;
+    padding:2%;
+    border-radius:10px;
 }
 .recommended{
     padding:10px;
@@ -87,6 +132,9 @@ body{
     padding:10px;
     flex-grow:1;
     flex-basis:25%;
+}
+.topics-container p:hover{
+      background-color:lightgray;
 }
 .popular{
     padding:10px;
