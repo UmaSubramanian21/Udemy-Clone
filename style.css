@@ -79,6 +79,15 @@ body{
     padding:10px;
     border-radius:30px;
     color:white;
+    border:solid #A435f0 1px;
+
+}
+.catagories p:hover{
+    transition:2s;
+    background-color:transparent;
+    border:solid #A435f0 1px;
+    cursor:pointer;
+    color:#A435f0;
 }
 
 .sale-image{
@@ -99,7 +108,23 @@ body{
     left:100px;
     padding:2%;
     border-radius:10px;
+    animation-name:scaleimage;
+    animation-duration:2s;
+    animation-fill-mode:forwards;
+    opacity:0;
 }
+
+@keyframes scaleimage {
+    0% {
+        transform:scale(0);
+        opacity:0;
+    } 
+    100% {
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
 .recommended{
     padding:10px;
 
